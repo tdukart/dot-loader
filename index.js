@@ -7,6 +7,7 @@ module.exports = function(content) {
   }
   
   dot.templateSettings.selfcontained = true;
+  dot.templateSettings.strip = false;
 
   var content = fs.readFileSync(this.resourcePath);
   return "module.exports = " + dot.template(content);
